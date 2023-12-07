@@ -1,0 +1,15 @@
+        let operation2 = SimpleOperation()
+        operation2.input = "Operation2"
+        operation2.completionBlock = {
+            print("result2", operation2.output ?? "")
+        }
+        
+        operationQueue.addOperation(operation2)
+    }
+    
+    func addAsyncOperation() {
+        let operation1 = SimpleAsyncOperation()
+        operation1.input = "AsyncOperation1"
+        operation1.completionBlock = {
+            print("result1", operation1.output ?? "")
+        }
